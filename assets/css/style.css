@@ -1,12 +1,35 @@
+.container {
+    max-width: 1140px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+/* heading */
 
 
 
+/* front image */
 
+#front-outer {
+    height: 600px;
+    width:100%;
+    overflow: hidden;
+
+    position: relative;
+}
+
+#front-image {
+    height: 600px;
+    width:60%;
+    background: url('../images/front-image-m.jpg') no-repeat center center;
 
 /* footer */
-
-footer {
-    height: 100px;        
+footer{
+    height: 100px;
 }
 
 footer p {
