@@ -10,48 +10,16 @@
 
 /* heading */
 
-
+heading {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
 
 /* front image */
 
-#front-outer {
-    height: 600px;
-    width:100%;
-    overflow: hidden;
-
-    position: relative;
-}
-
-#front-image {
-    height: 600px;
+front-image {
+    height: 400px;
     width:60%;
-    background: url('../images/front-image-m.jpg') no-repeat center center;
-
-/* footer */
-footer{
-    height: 100px;
-}
-
-footer p {
-    text-align: center;
-    font-size: small;
-}
-
-.social-network {
-    text-align: center;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-}
-
-.social-network > li {
-    display: inline;
-}
-
-.social-network i {
-    font-size: 160%;
-    margin: 1%;
-    padding: 5%;
-    color: #0a0a0a;
+    align: no-repeat center center;
 }
