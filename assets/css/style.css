@@ -11,15 +11,46 @@
 /* heading */
 
 heading {
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
+    
 }
 
 /* front image */
 
 front-image {
-    height: 400px;
-    width:60%;
-    align: no-repeat center center;
+    
 }
+
+/* game area */
+
+question-area {
+
+}
+
+answer-area {
+
+}
+
+card {
+
+}
+
+control-area {
+
+}
+
+scores {
+
+}
+
+/* footer */
+
+footer {
+
+}
+
+social-network {
+
+}
+
+/* media quries */
+
