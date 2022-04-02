@@ -13,18 +13,20 @@
     <title>Coffee Quiz</title>
 </head>
 <body>
-    <div>
-        <header>
-            <h1 class="heading">Coffee Quiz</h1>
-            <section class="front-image">
-            <img src="assets/images/coffee biins.jpeg" alt="like to coffee beans">
-            </section>
-        </header>
+    <div class="container-fluid">
+        <div class="row">
+            <header class="col-sm-12 box-shadow squared">
+                <h1 class="heading">Coffee Quiz</h1>
+                    <section class="front-image">
+                    <img src="assets/images/coffee biins.jpeg" alt="like to coffee beans">
+                    </section>
+            </header>
+        </div>        
     </div>
     
     <!-- quiz display for game -->
     <section id="game-area">
-        <div id="question-area" class="question-area center-text box-shadow">
+        <div id="question-area" class="question-area center-text">
             <h2>Question</h2>
             <p id="question"></p>
 
@@ -59,11 +61,17 @@
     </div>
     <!-- footer -->
     <footer>
-        <div class="social-network">
-                <a href="https://facebook.com" rel="noopener" 
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 center-text">
+                    <a href="https://facebook.com" rel="noopener" 
                 aria-label="Visit my Facebook page (open in a new tab)" target="_blank" ><i class="fab fa-facebook-square"></i></a>
-        </div>
-        <p>&copy;2022 Coffee Quiz</p>
+                </div>                
+            </div>
+            <div class="row center-text">
+                <p>&copy;2022 Coffee Quiz</p>
+            </div>
+        </div>        
     </footer>
     <script src="assets/js/question.js"></script>
     <script src="assets/js/script.js"></script>

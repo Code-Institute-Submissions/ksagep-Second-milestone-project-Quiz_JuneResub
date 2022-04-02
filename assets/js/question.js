@@ -49,7 +49,7 @@ let question = [
 
     {
         question: "What percentage of the coffee stays warm if we add cream to it??",
-        answers:["10%", "20%", "30%", "if you have a microwave oven, always"]
+        answers:["10%", "20%", "30%", "if you have a microwave oven, always"],
         correctAnswer: "20%"
     },
 
