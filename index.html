@@ -15,19 +15,19 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-4 col-lg-4">
-                <section class="front-image1">
-                    <img src="assets/images/coffee biins.jpeg" alt="like to coffee beans">
+            <div class="col-xs-4 col-lg-3">
+                <section class="front-left-image">
+                    <img src="assets/images/coffee biins dec.jpg" alt="like to coffee beans">
                 </section>
             </div>
-            <div class="col-xs-4 col-lg-4">
+            <div class="col-xs-4 col-lg-6">
                 <header>
                     <h1 class="heading">Coffee Quiz</h1>                    
                 </header>
             </div>
-            <div class="col-xs-4 col-lg-4">   
-                <section class="front-image2">
-                    <img src="assets/images/ready coffee.webp" alt="your coffee is ready">
+            <div class="col-xs-4 col-lg-3">   
+                <section class="front-right-image">
+                    <img src="assets/images/it chill dec.jpg" alt="your coffee is ready">
                 </section>
             </div>
         </div>        
@@ -40,11 +40,19 @@
                 <div id="question-area" class="question-area center-text">
                     <h2>Question</h2>
                     <p id="question"></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
             <!-- answer buttons displays when the quiz start -->
-                    <div id="answer-container" class="answer-area center-text box-shadow">
-                        <div id="answer-box"></div>
-                    </div>
+    <div class="container-fluid">
+        <div class="row">                
+            <div id="answer-container" class="answer-area center-text box-shadow">
+                <div id="answer-box"></div>
+            </div>
+        </div>
+    </div>
 
             <!-- display if the answer is correct -->
                     <div id="correct" class="card center-text box-shadow">
@@ -54,37 +62,45 @@
 
             <!-- display if the answer is incorrect -->
                     <div id="incorrect" class="card center-text box-shadow">
-                        <h3>Answer is wrooong!</h3>
+                        <h3>Answer is wrong!</h3>
                         <p id="incorrect-text">The correct answer is <span id="correct-span"></span>.</p>           
                         <button aria-label="Next" id="incorrect-next-btn">Next</button>
                     </div>
 
             <!-- display when the quiz ends -->
-                    <div id="end-box" class="card center-text box-shadow">
-                        <p>Your score is: <span id="total"></span></p>                    
-                    </div>
-                </div>
-
-                <div class="control-area">
-                    <button data-type="next" class="btn btn--gray">Next</button>
-                </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="end-box" class="card center-text box-shadow">
+                <p>Your score is: <span id="total"></span></p>                    
             </div>
 
-        <!-- display the score board for the quiz -->
-        <div class="row score-area center-text">
-            <p class="scores">Correct Answers: <span id="score">0</span></p>
-        </div>    
-    </div>
+            <!-- display the score board for the quiz -->
+            <div class="score-area center-text">
+                <p class="scores">Correct Answers: <span id="score">0</span></p>
+            </div> 
 
+        </div>
+    </div>
+                    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="control-area">
+                <button data-type="next" class="btn btn--gray">Next</button>
+            </div>
+        </div>
+    </div>
+     
     <!-- footer -->
     <footer>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6 center-text">
+            <div class="row center-text">
+                <div class="col-xs-4 center-text">
                     <a href="https://facebook.com" rel="noopener" 
                 aria-label="Visit my Facebook page (open in a new tab)" target="_blank" ><i class="fab fa-facebook-square"></i></a>
                 </div>                
             </div>
+        </div>
+        <div class="container-fluid">
             <div class="row center-text">
                 <p>&copy;2022 Coffee Quiz</p>
             </div>

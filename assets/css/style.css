@@ -1,20 +1,36 @@
+body {
+    font-size: 30px;
+    font-family: sans-serif;
+    color: black; 
+}
 
 
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* heading */
 
 heading {
-    
+    font-size: 40px;
+    font-family: sans-serif;
+    text-align: center;
+    color: black;
+    padding: ;
 }
 
 /* front image */
 
-front-image1 {
-    
+front-left-image {
+    align-items: center;
+    padding-left: 70px;
 }
 
-front-image2 {
-    
+front-right-image {
+    align-items: center;
+    padding-left: 15px;
 }
 
 /* game area */
@@ -32,7 +48,7 @@ card {
 }
 
 control-area {
-
+    padding: 20px;
 }
 
 scores {
@@ -42,12 +58,14 @@ scores {
 /* footer */
 
 footer {
-
+    height: 100px;
+    font-size: 15px;
 }
 
 social-network {
-
+    padding-top: 10px;
 }
 
 /* media quries */
 
+IDs
