@@ -5,7 +5,7 @@ body {
     padding: 0px;
     color: black;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
 
@@ -15,89 +15,71 @@ div {
 
 /* heading */
 
-heading {
+.heading {
     font-size: 40px;
     font-family: sans-serif;
     text-align: center;
     color: black;
-    
 }
 
 /* front image */
 
-front-left-image {
-    align-items: center;
-    padding-right: 25px;
+.front-left-image {
+    float: left;
 }
 
-front-right-image {
-    align-items: center;
-    padding-left: 25px;
+.front-right-image {
+    float: right;
 }
 
 /* game area */
 
 #game-area {
-
+    font-size: large;
+    height: 200px;
+    width: 300px;
 }
 
-#question-area {
-
-}
-
-question-area {
-
+.question-area {
+    height: 75px;
+    width: 100px;
 }
 
 #question {
-
+    font-size: large;
 }
 
 .center-text {
     text-align: center;
 }
 
-.box-shadow {
-    box-shadow: 0 -5px 12px;
-    color: gray;
-}
-
-#answer-container {
-
-}
-
 #answer-box {
-
+    height: 75px;
+    width: 100px;
 }
 
-answer-area {
+.answer-area {
     padding: 50px;
 }
 
 #correct {
-
+    font-size: large;
 }
 
 #incorrect {
-
-}
-
-#next-btn {
-
-}
-
-#incorrect-next-btn {
-
+    font-size: large;
 }
 
 #end-box {
-
+    height: 75px;
+    width: 100px;
 }
 
-card {
+.card {
     min-height: 35px;
-    display: none;
+    display: inline-block;
     background-color: blue;
+    text-align: center;
 }
 
 control-area {
@@ -105,15 +87,18 @@ control-area {
 }
 
 scores {
-
+    font-size: large;
+    text-align: center;
 }
 
 #total {
-
+    font-size: large;
 }
 
-score-area {
-    
+.score-area {
+    height: 75px;
+    width: 100px;
+    text-align: center;
 }
 
 /* footer */
@@ -126,5 +111,3 @@ footer {
 social-network {
     padding-top: 10px;
 }
-
-/* media quries */

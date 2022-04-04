@@ -13,25 +13,16 @@
     <title>Coffee Quiz</title>
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-4 col-lg-3">
-                <section class="front-left-image">
-                    <img src="assets/images/coffee biins dec.jpg" alt="like to coffee beans">
-                </section>
-            </div>
-            <div class="col-xs-4 col-lg-6">
-                <header>
-                    <h1 class="heading">Coffee Quiz</h1>                    
-                </header>
-            </div>
-            <div class="col-xs-4 col-lg-3">   
-                <section class="front-right-image">
-                    <img src="assets/images/it chill dec.jpg" alt="your coffee is ready">
-                </section>
-            </div>
-        </div>        
-    </div>
+    <header>
+        <section class="front-left-image">
+            <img src="assets/images/coffee biins dec.jpg" alt="like to coffee beans">
+        </section>
+        <h1 class="heading center-text">Coffee Quiz</h1>
+        <section class="front-right-image">
+            <img src="assets/images/it chill dec.jpg" alt="your coffee is ready">
+        </section>
+    </header>
+            
     
     <!-- quiz display for game -->
     <div class="container-fluid">
@@ -48,29 +39,27 @@
             <!-- answer buttons displays when the quiz start -->
     <div class="container-fluid">
         <div class="row">                
-            <div id="answer-container" class="answer-area center-text box-shadow">
+            <div id="answer-container" class="answer-area center-text">
                 <div id="answer-box"></div>
             </div>
         </div>
     </div>
 
             <!-- display if the answer is correct -->
-                    <div id="correct" class="card center-text box-shadow">
+                    <div id="correct" class="card center-text">
                         <h3>Answer is correct!</h3>            
-                        <button aria-label="Next" id="next-btn">Next</button>
                     </div>
 
             <!-- display if the answer is incorrect -->
-                    <div id="incorrect" class="card center-text box-shadow">
+                    <div id="incorrect" class="card center-text">
                         <h3>Answer is wrong!</h3>
                         <p id="incorrect-text">The correct answer is <span id="correct-span"></span>.</p>           
-                        <button aria-label="Next" id="incorrect-next-btn">Next</button>
                     </div>
 
             <!-- display when the quiz ends -->
     <div class="container-fluid">
         <div class="row">
-            <div id="end-box" class="card center-text box-shadow">
+            <div id="end-box" class="card center-text">
                 <p>Your score is: <span id="total"></span></p>                    
             </div>
 
