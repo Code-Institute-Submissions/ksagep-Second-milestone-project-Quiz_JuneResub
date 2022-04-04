@@ -1,14 +1,16 @@
 body {
     font-size: 30px;
     font-family: sans-serif;
-    color: black; 
+    margin: 0px;
+    padding: 0px;
+    color: black;
+    display: flex;
+    justify-content: center;
 }
 
 
 div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   align-items: center;
 }
 
 /* heading */
@@ -18,33 +20,84 @@ heading {
     font-family: sans-serif;
     text-align: center;
     color: black;
-    padding: ;
+    
 }
 
 /* front image */
 
 front-left-image {
     align-items: center;
-    padding-left: 70px;
+    padding-right: 25px;
 }
 
 front-right-image {
     align-items: center;
-    padding-left: 15px;
+    padding-left: 25px;
 }
 
 /* game area */
+
+#game-area {
+
+}
+
+#question-area {
+
+}
 
 question-area {
 
 }
 
+#question {
+
+}
+
+.center-text {
+    text-align: center;
+}
+
+.box-shadow {
+    box-shadow: 0 -5px 12px;
+    color: gray;
+}
+
+#answer-container {
+
+}
+
+#answer-box {
+
+}
+
 answer-area {
+    padding: 50px;
+}
+
+#correct {
+
+}
+
+#incorrect {
+
+}
+
+#next-btn {
+
+}
+
+#incorrect-next-btn {
+
+}
+
+#end-box {
 
 }
 
 card {
-
+    min-height: 35px;
+    display: none;
+    background-color: blue;
 }
 
 control-area {
@@ -53,6 +106,14 @@ control-area {
 
 scores {
 
+}
+
+#total {
+
+}
+
+score-area {
+    
 }
 
 /* footer */
@@ -67,5 +128,3 @@ social-network {
 }
 
 /* media quries */
-
-IDs
