@@ -5,10 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Quiz app for coffee fans">
-    <!-- font awesome and google fonts -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
-
+    
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Coffee Quiz</title>
 </head>
@@ -25,60 +22,29 @@
             
     
     <!-- quiz display for game -->
-    <div class="container-fluid">
-        <div class="row">
-            <div id="game-area">
-                <div id="question-area" class="question-area center-text">
-                    <h2>Question</h2>
-                    <p id="question"></p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-            <!-- answer buttons displays when the quiz start -->
-    <div class="container-fluid">
-        <div class="row">                
-            <div id="answer-container" class="answer-area center-text">
-                <div id="answer-box"></div>
-            </div>
-        </div>
-    </div>
-
-            <!-- display if the answer is correct -->
-                    <div id="correct" class="card center-text">
-                        <h3>Answer is correct!</h3>            
-                    </div>
-
-            <!-- display if the answer is incorrect -->
-                    <div id="incorrect" class="card center-text">
-                        <h3>Answer is wrong!</h3>
-                        <p id="incorrect-text">The correct answer is <span id="correct-span"></span>.</p>           
-                    </div>
-
-            <!-- display when the quiz ends -->
-    <div class="container-fluid">
-        <div class="row">
-            <div id="end-box" class="card center-text">
-                <p>Your score is: <span id="total"></span></p>                    
-            </div>
-
-            <!-- display the score board for the quiz -->
-            <div class="score-area center-text">
-                <p class="scores">Correct Answers: <span id="score">0</span></p>
-            </div> 
+    <div class="panel">
+        <div class="result">
 
         </div>
-    </div>
-                    
-    <div class="container-fluid">
-        <div class="row">
-            <div class="control-area">
-                <button data-type="next" class="btn btn--gray">Next</button>
-            </div>
+        <div class="question-container" id="question">
+
+        </div>
+        <div class="option-container">
+            <button class="option" onclick="" id="op1">option1</button>
+            <button class="option" id="op2">option2</button>
+            <button class="option" id="op3">option3</button>
+            <button class="option" id="op4">option4</button>     
+        </div>
+    
+    <!-- navigation for game -->
+        <div class="navigation">
+            <button class="evaluate">Evaluate</button>
+            <button class="next">Next</button>
         </div>
     </div>
-     
+    <script src="assets/js/script.js"></script>
+
+
     <!-- footer -->
     <footer>
         <div class="container-fluid">
@@ -94,8 +60,6 @@
                 <p>&copy;2022 Coffee Quiz</p>
             </div>
         </div>        
-    </footer>
-    <script src="assets/js/question.js"></script>
-    <script src="assets/js/script.js"></script>
+    </footer>    
 </body>
 </html>

@@ -1,16 +1,16 @@
 body {
-    font-size: 30px;
-    font-family: sans-serif;
     margin: 0px;
     padding: 0px;
-    color: black;
-    display: flex;
-    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
 }
 
-
-div {
-   align-items: center;
+.panel {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* heading */
@@ -34,80 +34,61 @@ div {
 
 /* game area */
 
-#game-area {
-    font-size: large;
-    height: 200px;
-    width: 300px;
-}
-
-.question-area {
-    height: 75px;
-    width: 100px;
-}
-
-#question {
-    font-size: large;
-}
-
-.center-text {
+.question-container {
+    margin: 10px;
+    padding: 5px;
+    height: 10vh;
+    width: 80vw;
+    background-color: darkcyan;
+    font-size: x-large;
     text-align: center;
 }
 
-#answer-box {
-    height: 75px;
-    width: 100px;
+.result {
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+    height: 10vh;
+    width: 80vw;
+    font-size: 50px;
 }
 
-.answer-area {
-    padding: 50px;
+.option {
+    height: 10vh;
+    width: 15vw;
+    padding: 10px;
+    font-size: larger;
+    background-color: floralwhite;
+    border-radius: 20%;
 }
 
-#correct {
-    font-size: large;
-}
-
-#incorrect {
-    font-size: large;
-}
-
-#end-box {
-    height: 75px;
-    width: 100px;
-}
-
-.card {
-    min-height: 35px;
-    display: inline-block;
+.option:hover {
     background-color: blue;
-    text-align: center;
 }
 
-control-area {
-    padding: 20px;
+.navigation {
+    margin: 10px;
+    padding: 5px;
+    width: 80vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    background-color: lightgray;
 }
 
-scores {
-    font-size: large;
-    text-align: center;
+.evaluate, .next {
+    font-size: larger;
+    margin: 0px;
+    padding: 5px;
+    width: 30vw;
+    height: 8vh;
 }
 
-#total {
-    font-size: large;
+.evaluate {
+    background-color: chartreuse;
 }
 
-.score-area {
-    height: 75px;
-    width: 100px;
-    text-align: center;
-}
-
-/* footer */
-
-footer {
-    height: 100px;
-    font-size: 15px;
-}
-
-social-network {
-    padding-top: 10px;
+.next {
+    background-color: gray;
+    color: black;
 }
