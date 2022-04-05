@@ -117,5 +117,80 @@ function Iterate(id) {
     op2.value = Questions[id].a[1].isCorrect;
     op3.value = Questions[id].a[2].isCorrect;
     op4.value = Questions[id].a[3].isCorrect;
+
+    var selected = "";
+
+    /** Selections for ops **/
+    op1.addEventListener(
+        "click", () => {
+            op1.style.backgroundColor = "blue";
+            op2.style.backgroundColor = "floralwhite";
+            op3.style.backgroundColor = "floralwhite";
+            op4.style.backgroundColor = "floralwhite";
+            selected = op1.value;
+        }
+    )
+
+    op2.addEventListener(
+        "click", () => {
+            op1.style.backgroundColor = "floralwhite";
+            op2.style.backgroundColor = "blue";
+            op3.style.backgroundColor = "floralwhite";
+            op4.style.backgroundColor = "floralwhite";
+            selected = op2.value;
+        }
+    )
+
+    op3.addEventListener(
+        "click", () => {
+            op1.style.backgroundColor = "floralwhite";
+            op2.style.backgroundColor = "floralwhite";
+            op3.style.backgroundColor = "blue";
+            op4.style.backgroundColor = "floralwhite";
+            selected = op3.value;
+        }
+    )
+
+    op4.addEventListener(
+        "click", () => {
+            op1.style.backgroundColor = "floralwhite";
+            op2.style.backgroundColor = "floralwhite";
+            op3.style.backgroundColor = "floralwhite";
+            op4.style.backgroundColor = "blue";
+            selected = op4.value;
+        }
+    )
+
+    /** The evaluation buton **/
+    const evaluate = document.getElementsByClassName("evaluate");
+
+    /** Evaluate method **/
+    evaluate[0].addEventListener(
+        "click", () => {
+            if (selected == "true") {
+                result[0].innerHTML = "True";
+                result[0].style.color = "green";
+            } else {
+                result[0].innerHTML = "False";
+                result[0].style.color = "red";
+            }
+        }
+    )
 }
 
+if (start) {
+    Iterate("0");
+}
+
+    /** Next button and its method **/
+    const next = document.getElementsByClassName('next') [0];
+    var id = 0;
+
+    next.addEventListener("click", () => {
+        start = false;
+        if (id < 9) {
+            id++;
+            Iterate(id);
+            console.log(id);
+        }
+    })
