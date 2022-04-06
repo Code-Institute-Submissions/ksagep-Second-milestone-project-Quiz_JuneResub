@@ -5,8 +5,8 @@ body {
     height: 100vh;
 }
 
-.panel {
-    height: 80vh;
+.container {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,8 +37,8 @@ body {
 .question-container {
     margin: 10px;
     padding: 5px;
-    height: 10vh;
-    width: 80vw;
+    height: 40vh;
+    width: 40vw;
     background-color: darkcyan;
     font-size: x-large;
     text-align: center;
@@ -53,10 +53,20 @@ body {
     font-size: 50px;
 }
 
+.option-container {
+    display: flex;
+    margin: 10px;
+    padding: 5px;
+    height: 20vh;
+    width: 80vw;
+    justify-content: space-around;
+    background-color: #9eb1b3;
+}
+
 .option {
-    height: 10vh;
-    width: 15vw;
-    padding: 10px;
+    height: 8vh;
+    width: 10vw;
+    padding: 5px;
     font-size: larger;
     background-color: floralwhite;
     border-radius: 20%;
@@ -74,6 +84,7 @@ body {
     display: flex;
     justify-content: space-around;
     background-color: lightgray;
+    align-items: center;
 }
 
 .evaluate, .next {
@@ -90,5 +101,34 @@ body {
 
 .next {
     background-color: gray;
-    color: black;
+}
+
+/* footer */
+
+footer {
+    height: 100px;        
+}
+
+footer p {
+    text-align: center;
+    font-size: small;
+}
+
+.social-network {
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.social-network > li {
+    display: inline;
+}
+
+.social-network i {
+    font-size: 160%;
+    margin: 1%;
+    padding: 5%;
+    color: #0a0a0a;
 }

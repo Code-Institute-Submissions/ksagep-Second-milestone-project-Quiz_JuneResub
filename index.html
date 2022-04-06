@@ -4,31 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Quiz app for coffee fans">
-    
-    <link rel="stylesheet" href="assets/css/style.css">
-    
+    <meta name="description" content="Quiz app for coffee fans">    
+    <link rel="stylesheet" href="assets/css/style.css">    
 </head>
 <body>
     <header>
-        <section class="front-left-image">
+        <div class="front-left-image">
             <img src="assets/images/coffee biins dec.jpg" alt="like to coffee beans">
-        </section>
+        </div>
         <h1 class="heading">Coffee Quiz</h1>
-        <section class="front-right-image">
+        <div class="front-right-image">
             <img src="assets/images/it chill dec.jpg" alt="your coffee is ready">
-        </section>
+        </div>
     </header>
             
     
     <!-- quiz display for game -->
-    <div class="panel">
-        <div class="result">
-
-        </div>
-        <div class="question-container" id="question">
-
-        </div>
+    <div class="container">
+        <div class="result"></div>
+        <div class="question-container" id="question"></div>
         <div class="option-container">
             <button class="option" onclick="" id="op1">option1</button>
             <button class="option" id="op2">option2</button>
@@ -42,24 +36,22 @@
             <button class="next">Next</button>
         </div>
     </div>
-    <script src="assets/js/script.js"></script>
+    <script src="script.js"></script>
 
 
     <!-- footer -->
     <footer>
-        <div class="container-fluid">
-            <div class="row center-text">
-                <div class="col-xs-4 center-text">
-                    <a href="https://facebook.com" rel="noopener" 
-                aria-label="Visit my Facebook page (open in a new tab)" target="_blank" ><i class="fab fa-facebook-square"></i></a>
-                </div>                
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row center-text">
-                <p>&copy;2022 Coffee Quiz</p>
-            </div>
-        </div>        
-    </footer>    
+        <ul class="social-network">
+            <li>
+                <a href="https://instagram.com" target="_blank" rel="noopener"
+                aria-label="Visit my Instagram page (open in a new tab)"><i class="fab fa-instagram-square"></i></a>
+            </li>
+            <li>
+                <a href="https://facebook.com" target="_blank" rel="noopener"
+                aria-label="Visit my Facebook page (open in a new tab)"><i class="fab fa-facebook-square"></i></a>
+            </li>            
+        </ul>
+        <p>&copy;2022 Coffee Quiz</p>
+    </footer>              
 </body>
 </html>
