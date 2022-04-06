@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-    height: 100vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,23 +22,13 @@ body {
     color: black;
 }
 
-/* front image */
-
-.front-left-image {
-    float: left;
-}
-
-.front-right-image {
-    float: right;
-}
-
 /* game area */
 
 .question-container {
-    margin: 10px;
-    padding: 5px;
-    height: 40vh;
-    width: 40vw;
+    margin: 5px;
+    padding: 1px;
+    height: 10vh;
+    width: 30vw;
     background-color: darkcyan;
     font-size: x-large;
     text-align: center;
@@ -64,12 +54,13 @@ body {
 }
 
 .option {
-    height: 8vh;
+    height: 12vh;
     width: 10vw;
     padding: 5px;
-    font-size: larger;
+    font-size: smaller;
     background-color: floralwhite;
     border-radius: 20%;
+    text-align: center;
 }
 
 .option:hover {
