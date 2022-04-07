@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-    height: 50vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -97,15 +97,21 @@ body {
 /* footer */
 
 footer {
-    height: 50px;
-    text-align: center;
-    font-size: large;        
+    height: 100px;        
 }
 
 .social-network {
+    text-align: center;
+    align-items: center;
+}
+
+.social-network > li {
     display: inline;
-    font-size: 100%;
-    margin: 0%;
-    padding: 0%;
+}
+
+.social-network i {
+    font-size: 160%;
+    margin: 1%;
+    padding-left: 10px;
     color: #0a0a0a;
 }

@@ -78,7 +78,7 @@ const questions = [{
              { text: "Russia", isCorrect: false },
              { text: "Vietnam", isCorrect: false }]
   }
-  ]
+  ];
   /** Set start **/
   var start = true;
   /** Iterate **/
@@ -111,7 +111,7 @@ const questions = [{
           op4.style.backgroundColor = "floralwhite";
           selected = op1.value;
       }
-    )
+    );
     op2.addEventListener(
           "click", () => {
           op1.style.backgroundColor = "floralwhite";
@@ -120,7 +120,7 @@ const questions = [{
           op4.style.backgroundColor = "floralwhite";
           selected = op2.value;
       }
-    )
+    );
     op3.addEventListener(
           "click", () => {
           op1.style.backgroundColor = "floralwhite";
@@ -129,7 +129,7 @@ const questions = [{
           op4.style.backgroundColor = "floralwhite";
           selected = op3.value;
       }
-    )
+    );
     op4.addEventListener(
           "click", () => {
           op1.style.backgroundColor = "floralwhite";
@@ -138,7 +138,7 @@ const questions = [{
           op4.style.backgroundColor = "blue";
           selected = op4.value;
       }
-    )
+    );
     /** The evaluation buton **/
     const evaluate = document.getElementsByClassName("evaluate");
     /** Evaluate method **/
@@ -152,7 +152,7 @@ const questions = [{
               result[0].style.color = "red";
           }
       }
-    )
+    );
   }
   if (start) {
     iterate(0);
@@ -167,4 +167,4 @@ const questions = [{
         iterate(id);
         console.log(id);
     }
-  })
+  });
