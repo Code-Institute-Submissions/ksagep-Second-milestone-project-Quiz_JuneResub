@@ -97,29 +97,15 @@ body {
 /* footer */
 
 footer {
-    height: 100px;        
-}
-
-footer p {
+    height: 50px;
     text-align: center;
-    font-size: small;
+    font-size: large;        
 }
 
 .social-network {
-    text-align: center;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-}
-
-.social-network > li {
     display: inline;
-}
-
-.social-network i {
-    font-size: 160%;
-    margin: 1%;
-    padding: 5%;
+    font-size: 100%;
+    margin: 0%;
+    padding: 0%;
     color: #0a0a0a;
 }
