@@ -19,7 +19,18 @@ body {
     font-size: 40px;
     font-family: sans-serif;
     text-align: center;
+    padding-right: 300px;
     color: black;
+    
+}
+
+.front-image-left {
+    float: left;
+    padding-top: 70px;    
+}
+
+.front-image-right {
+    float: right;    
 }
 
 /* game area */
@@ -87,7 +98,7 @@ body {
 }
 
 .evaluate {
-    background-color: chartreuse;
+    background-color: darkorange;
 }
 
 .next {
@@ -113,5 +124,5 @@ footer {
     font-size: 160%;
     margin: 1%;
     padding-left: 10px;
-    color: #0a0a0a;
+    color: black;
 }
