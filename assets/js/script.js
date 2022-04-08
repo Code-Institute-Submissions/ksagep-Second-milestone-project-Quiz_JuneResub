@@ -11,7 +11,7 @@ const questions = [{
     question: "Which is not a roasting method?",
     answer:[{ text: "Spanish", isCorrect: false },
              { text: "Italian", isCorrect: false },
-             { text: "Frenc", isCorrect: false },
+             { text: "French", isCorrect: false },
              { text: "British", isCorrect: true }]        
   },
   {
@@ -26,7 +26,7 @@ const questions = [{
     id: 3,
     question: "There is really no caffeine in decaffeinated coffee?",
     answer:[{ text: "Yes, it is true", isCorrect: false },
-             { text: "No, it is not true (decaffeinated coffee contains 2-6% caffeine)", isCorrect: true },
+             { text: "Decaffeinated coffee contains 2-6% caffeine", isCorrect: true },
              { text: "Maybe, it is true", isCorrect: false },
              { text: "What does decaffeinated coffee mean?", isCorrect: false }]        
   },

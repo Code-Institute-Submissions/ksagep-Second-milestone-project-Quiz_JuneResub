@@ -65,7 +65,7 @@ When users chose a possible answer have to evaluate it. After it clicked the eva
 
 ### Footer
 
-The footer is simple and it contains to my Facebook (or Meta) and Instagram as well as copyright info also.
+The footer is simple and it contains to my Facebook (or Meta) and GitHub as well as copyright info also.
 
 ## Resources
 
@@ -85,11 +85,11 @@ It was tested on  Macbook Pro, Apple iPhone 13 Pro and Samsung A6 and A10 mobile
 
 ### Validators
 
-The HTML was checked by W3C HTML validator and it did not reported any issues. You can find the result [Here]().
+The HTML was checked by W3C HTML validator and it did not reported any issues. You can find the result [Here](assets/images/W3C%20HTML%20assessment.jpg).
 
-The CSS was checked by W3C Jigsaw validator it did not reported any issues. You can find the result [Here]().
+The CSS was checked by W3C Jigsaw validator it did not reported any issues. You can find the result [Here](assets/images/W3C%20CSS%20assessment.jpg).
 
-The JS was checked by these [result]().
+The JS was checked via JSHint by these [result part 1](assets/images/JSHint%20assessment%20part1.jpg) and [result part 2](assets/images/JSHint%20assessment%20part2.jpg).
 
 ### Local testing
 
