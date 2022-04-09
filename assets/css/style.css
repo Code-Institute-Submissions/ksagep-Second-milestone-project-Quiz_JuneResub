@@ -19,7 +19,7 @@ body {
     font-size: 40px;
     font-family: sans-serif;
     text-align: center;
-    padding-right: 300px;
+    padding-right: 290px;
     color: black;
     
 }
@@ -30,7 +30,8 @@ body {
 }
 
 .front-image-right {
-    float: right;    
+    float: right;
+    padding-top: 2px;   
 }
 
 /* game area */
@@ -103,6 +104,17 @@ body {
 
 .next {
     background-color: gray;
+}
+
+/* for medium screen sizes from 768 px and down */
+
+@media screen and (max-width: 400px) {
+    
+    .container {
+        width: 65%;
+        height: auto;
+        margin: 0 auto;
+    }
 }
 
 /* footer */
