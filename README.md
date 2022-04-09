@@ -91,7 +91,7 @@ The HTML was checked by W3C HTML validator and it did not reported any issues. Y
 
 The CSS was checked by W3C Jigsaw validator it did not reported any issues. You can find the result [Here](assets/images/W3C%20CSS%20assessment.jpg).
 
-The JS was checked via JSHint by these [result part 1](assets/images/JSHint%20assessment%20part1.jpg) and [result part 2](assets/images/JSHint%20assessment%20part2.jpg).
+The JS was checked via JSHint by these [result part 1](assets/images/JSHint%20assessment%20part1.jpg) and [result part 2](assets/images/JSHint%20assessment%20part2.jpg). According to the assessment some functions are available in ES6 version. It was the reason that I got some warnings in the assessment.
 
 ### Local testing
 
@@ -100,7 +100,7 @@ Links in footer were tested to ensure these link to the proper pages.
 
 ### Responsiveness
 
-I used Google Chrome Dev Tools for this exercise. I tested for mobile and desktop devices and it worked properly.
+I used Google Chrome Dev Tools for this exercise. I tested for mobile and desktop devices.
 
 Mobile test:
 ![My Image](assets/images/lighthouse-assessment-mobile.jpg)
@@ -128,3 +128,7 @@ The steps of the publishing on the GitHub were as follow:
     1. **"Settings"** on the repository
     2. **"Source"** of "GitHub Pages" selected *master for Branch* and saved it
     3. The website was published on GitHub Pages and the link was provided in the same section.
+
+## Problem during the development
+
+On 9th April 2022 afternoon and evening I had the same 6 messages what you can see on the [pic1](assets/images/problem%2004%2009%202022%20evening.jpg) and on the [Google](assets/images/check%20on%20the%20google.jpg) also.
