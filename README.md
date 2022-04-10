@@ -2,11 +2,11 @@
 
 I took the advice of my mentor and the teachers of the Code Institute's Diploma in Software Development Course and I have created a quiz which I liked and enjoyed the development of it. I like coffee and I am interested in coffee, type of coffees and I make different type of coffees every day.
 
-For link to this website click [Here]().
+For link to this website click [Here](https://ksagep.github.io/Second-milestone-project-Quiz/).
 
 Design has been focused to *Desktop first* and *Responsive* but this quiz is also working on mobile phones.
 
-![My Image](assets/images/)
+![My Image](assets/images/am-i-responsive.jpg)
 
 ## Who is this quiz for?
 
@@ -121,7 +121,7 @@ I managed the versions with the following process:
     2. git commit -m "Commit message" - to commit the stage of work
     3. git push - to update my work in GitHub
 
-## Publishing
+## Publish the quiz
 
 The steps of the publishing on the GitHub were as follow:
     
@@ -131,4 +131,4 @@ The steps of the publishing on the GitHub were as follow:
 
 ## Problem during the development
 
-On 9th April 2022 afternoon and evening I had the same 6 messages what you can see on the [pic1](assets/images/problem%2004%2009%202022%20evening.jpg) and on the [Google](assets/images/check%20on%20the%20google.jpg) also.
+On 9th and 10th April 2022 afternoon and evening I had the same 6 messages what you can see on the [pic1](assets/images/problem%2004%2009%202022%20evening.jpg) and on the [Google](assets/images/check%20on%20the%20google.jpg) also.

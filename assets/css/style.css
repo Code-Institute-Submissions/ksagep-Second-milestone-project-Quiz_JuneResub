@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
 body {
     margin: 0px;
     padding: 0px;
@@ -25,11 +27,16 @@ body {
 }
 
 .front-image-left {
+    width: 276px;
+    height: 183px;
     float: left;
     padding-top: 70px;    
 }
 
 .front-image-right {
+    width: 270px;
+    height: 179px;
+    padding-top: 70px;
     float: right;
     padding-top: 2px;   
 }
