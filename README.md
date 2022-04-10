@@ -4,7 +4,7 @@ I took the advice of my mentor and the teachers of the Code Institute's Diploma 
 
 For link to this website click [Here](https://ksagep.github.io/Second-milestone-project-Quiz/).
 
-Design has been focused to *Desktop first* and *Responsive* but this quiz is also working on mobile phones.
+Design has been focused to *Desktop, Laptop, Tablet first* and *Responsive* but this quiz is also working on mobile phones (sometimes rotate it).
 
 ![My Image](assets/images/am-i-responsive.jpg)
 
@@ -46,20 +46,20 @@ To achieve these goals I used JavaScript to create these fictional quiz. I used 
 
 ### Loading Screen
 
-![My Image](assets/images/Load%20pictures.jpg)
+![My Image](assets/images/Load%20pictures%202.jpg)
 
 On the loading screen the user will see the title of the Quiz and the first question with answers which are related to it. The colour scheme is provided a characteristic for the loading screen.
 
 ### Questions and answers
 
-![My Image](assets/images/Question%20and%20answer.jpg)
+![My Image](assets/images/Question%20and%20answer%202.jpg)
 
 When the users begins the quiz the first question with possible four answers is generated.
 The answers are each in their own button. When clicked they will change the colour to blue. 
 
 ### Response the questions
 
-![My Image](assets/images/Check%20the%20answers.jpg)
+![My Image](assets/images/Check%20the%20answers%202.jpg)
 
 When users chose a possible answer have to evaluate it. After it clicked the evaluate button they will generate a 'True' (green) or 'False' (red) note depending on if they click the right or wrong answers.
 
