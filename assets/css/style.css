@@ -41,6 +41,23 @@ body {
     padding-top: 2px;   
 }
 
+/* navigation link */
+
+#start-button {
+    font-size: 110%;
+    letter-spacing: 4px;
+    margin-right: 30px;
+    padding-bottom: 5px;
+}
+
+#start-button a {
+    text-decoration: none;
+    color: blue;
+}
+
+#start-button:hover {
+    border-bottom: 1px solid black;
+}
 /* game area */
 
 .question-container {
