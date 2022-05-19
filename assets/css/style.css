@@ -46,8 +46,10 @@ body {
 #start-button {
     font-size: 110%;
     letter-spacing: 4px;
-    margin-right: 30px;
+    margin-right: 50px;
+    padding-top: 250px;
     padding-bottom: 5px;
+    padding-left: 600px;
 }
 
 #start-button a {
@@ -72,14 +74,8 @@ body {
     width: 700px;
     height: 75px;
 
-    padding-left: 5px;
-
-    background-color: rgba(255, 255, 255, 0.5);
-   
-    bottom: 30px;
-    right: 100px;
-
-    position: absolute;
+    padding-left: 325px;
+    padding-top: 50px;
 }
 /* game area */
 
