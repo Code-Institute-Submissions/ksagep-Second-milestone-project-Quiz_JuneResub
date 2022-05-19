@@ -84,7 +84,6 @@ body {
     padding: 1px;
     height: 10vh;
     width: 30vw;
-    background-color: darkcyan;
     font-size: x-large;
     text-align: center;
 }
@@ -100,12 +99,11 @@ body {
 
 .option-container {
     display: flex;
-    margin: 10px;
-    padding: 5px;
-    height: 20vh;
+    padding-top: 25px;
+    height: 15vh;
     width: 80vw;
     justify-content: space-around;
-    background-color: #9eb1b3;
+    background-color: #354f52;
 }
 
 .option {
@@ -119,7 +117,7 @@ body {
 }
 
 .option:hover {
-    background-color: blue;
+    background-color: #cad2c5;
 }
 
 .navigation {
@@ -129,7 +127,6 @@ body {
     height: 10vh;
     display: flex;
     justify-content: space-around;
-    background-color: lightgray;
     align-items: center;
 }
 
@@ -142,11 +139,11 @@ body {
 }
 
 .evaluate {
-    background-color: darkorange;
+    background-color: #52796f;
 }
 
 .next {
-    background-color: gray;
+    background-color: #84a98c;
 }
 
 /* for medium screen sizes from 768 px and down */
