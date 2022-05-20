@@ -75,15 +75,15 @@ body {
     height: 75px;
 
     padding-left: 325px;
-    padding-top: 50px;
+    padding-top: 30px;
 }
 /* game area */
 
 .question-container {
     margin: 5px;
     padding: 1px;
-    height: 10vh;
-    width: 30vw;
+    height: 59px;
+    width: 500px;
     font-size: x-large;
     text-align: center;
 }
@@ -166,6 +166,7 @@ footer {
 .social-network {
     text-align: center;
     align-items: center;
+    padding-top: 25px;
 }
 
 .social-network > li {
