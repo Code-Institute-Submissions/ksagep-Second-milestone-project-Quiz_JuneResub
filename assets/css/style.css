@@ -7,6 +7,19 @@ body {
     height: 100vh;
 }
 
+body.correct {
+    --hue: var(--hue-correct);
+}
+
+body.wrong {
+    --hue: var(--hue-wrong);
+}
+
+:root {
+    --hue-wrong: 0;
+    --hue-correct: 145;
+}
+
 .container {
     height: 70vh;
     display: flex;
@@ -21,7 +34,7 @@ body {
     font-size: 40px;
     font-family: sans-serif;
     text-align: center;
-    padding-right: 290px;
+    padding-right: 270px;
     color: black;
     
 }
@@ -46,10 +59,8 @@ body {
 #start-button {
     font-size: 110%;
     letter-spacing: 4px;
-    margin-right: 50px;
-    padding-top: 250px;
-    padding-bottom: 5px;
-    padding-left: 600px;
+    margin-top: 150px;
+    text-align: center;
 }
 
 #start-button a {
@@ -71,11 +82,11 @@ body {
     letter-spacing: 2px;
     text-align: center;
 
-    width: 700px;
+    width: 500px;
     height: 75px;
 
-    padding-left: 325px;
-    padding-top: 30px;
+    padding-left: 425px;
+    padding-top: 0;
 }
 /* game area */
 
@@ -130,19 +141,12 @@ body {
     align-items: center;
 }
 
-.evaluate, .next {
+.next {
     font-size: larger;
     margin: 0px;
     padding: 5px;
     width: 30vw;
     height: 8vh;
-}
-
-.evaluate {
-    background-color: #52796f;
-}
-
-.next {
     background-color: #84a98c;
 }
 
@@ -176,6 +180,6 @@ footer {
 .social-network i {
     font-size: 160%;
     margin: 1%;
-    padding-left: 10px;
+    padding-left: 50px;
     color: black;
 }
