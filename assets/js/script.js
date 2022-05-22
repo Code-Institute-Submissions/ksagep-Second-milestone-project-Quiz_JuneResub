@@ -1,6 +1,6 @@
 const startButton = getElementById('start-button')
 const questionContainerElement = document.getElementById('question-container')
-const shuffledQuestions, currentQuestionIndex
+let shuffledQuestions, currentQuestionIndex
 const questionElement = document.getElementById('question')
 const optionButtonElement = document.getElementById('option-button')
 
@@ -14,14 +14,33 @@ function startQuiz() {
 }
 
 function setNextQuestion() {
+  resetState()
   showQuestion(shuffledQuestions[currentQuestionIndex])
+
 }
 
 function showQuestion(question) {
-
+  questionElement.innerText = question.question
+  question.answer.array.forEach(answer => {
+    const button = document.createElement('button')
+    button.innerText = answer.text
+    button.classList.add('btn')
+    if (answer.correct) {
+      button.dataset.correct = answer.correct
+    }
+    button.addEventListener('click')
+    answerButtonsElement.appendChild(button)
+  });
 }
 
-function optionSelection() {
+function resetState() {
+  nextButton.classList('hide')
+  while (answerButtonsElement.firstChild) {
+    answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+  }
+}
+
+function optionSelection(e) {
 
 }
 
