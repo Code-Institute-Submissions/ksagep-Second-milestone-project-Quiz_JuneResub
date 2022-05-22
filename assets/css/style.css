@@ -72,6 +72,23 @@ body.wrong {
     border-bottom: 1px solid black;
 }
 
+.next-btn {
+    font-style: bold;
+    padding: 5px 10px;
+}
+
+.hide {
+    display: none;
+}
+
+.btn.correct {
+     --hue: var(--hue-correct);
+}
+
+.btn.wrong {
+    --hue: var(--hue-wrong);
+}
+
 /* cover text */
 
 #cover-text {
