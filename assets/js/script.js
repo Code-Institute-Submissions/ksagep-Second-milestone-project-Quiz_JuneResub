@@ -1,10 +1,40 @@
-const questions = [{
+const startButton = getElementById('start-button')
+const questionContainerElement = document.getElementById('question-container')
+const shuffledQuestions, currentQuestionIndex
+const questionElement = document.getElementById('question')
+const optionButtonElement = document.getElementById('option-button')
+
+startButton.addEventListener('click', startQuiz)
+
+function startQuiz() {
+  startButton.classList.add('hide')
+  questionContainerElement.classList.remove('hide')
+  shuffledQuestions = questions.sort(() => Math.random() - .5)
+  currentQuestionIndex = 0
+}
+
+function setNextQuestion() {
+  showQuestion(shuffledQuestions[currentQuestionIndex])
+}
+
+function showQuestion(question) {
+
+}
+
+function optionSelection() {
+
+}
+
+const questions = [
+  {
     id: 0,
     question: "Where does coffee come from?",
-    answer:[{ text: "Ethiopia", isCorrect: true },
-             { text: "Italy", isCorrect: false },
-             { text: "France", isCorrect: false },
-             { text: "from a nearby store", isCorrect: false }]        
+    answer:[
+      { text: "Ethiopia", Correct: true },
+      { text: "Italy", Correct: false },
+      { text: "France", Correct: false },
+      { text: "from a nearby store", Correct: false }
+    ]        
   },
   {
     id: 1,
