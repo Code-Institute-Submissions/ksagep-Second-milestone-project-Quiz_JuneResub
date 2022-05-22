@@ -1,11 +1,15 @@
-const startButton = getElementById('start-button')
+const startButton = document.getElementById('start-button')
+const nextButton = document.getElementById('next-button')
 const questionContainerElement = document.getElementById('question-container')
 let shuffledQuestions, currentQuestionIndex
 const questionElement = document.getElementById('question')
 const optionButtonElement = document.getElementById('option-button')
 
 startButton.addEventListener('click', startQuiz)
-
+nextButton.addEventListener('click', () => {
+  currentQuestionIndex++
+  setNextQuestion()
+})
 function startQuiz() {
   startButton.classList.add('hide')
   questionContainerElement.classList.remove('hide')
@@ -34,6 +38,7 @@ function showQuestion(question) {
 }
 
 function resetState() {
+  clearStatusClass(document.body)
   nextButton.classList('hide')
   while (answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild)
@@ -41,7 +46,33 @@ function resetState() {
 }
 
 function optionSelection(e) {
+  const selectedButton = e.target
+  const correct = selectedButton.dataset.correct
+  setStatusClass(document.body, correct)
+  Array.from(answerButtonsElement.children).forEach(button => {
+    setStatusClass(button, button.dataset.correct)
+  })
+  if (shuffledQuestions.length > currentQuestionIndex + 1) {
+    nextButton.classList.remove('hide')
+  } else {
+    startButton.innerText = 'Restart'
+    startButton.classList.remove('hide')
+  }
+  
+}
 
+function setStatusClass(element) {
+  clearStatusClass(element)
+  if (correct) {
+    element.classList.add('correct')
+  } else {
+    element.classList.add('wrong')
+  }
+}
+
+function clearStatusClass() {
+  element.classList.remove('correct')
+  element.classList.remove('wrong')
 }
 
 const questions = [
