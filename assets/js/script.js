@@ -3,18 +3,20 @@ const nextButton = document.getElementById('next-button');
 const questionContainerElement = document.getElementById('question-container');
 let shuffledQuestions, currentQuestionIndex;
 const questionElement = document.getElementById('question');
-const optionButtonElement = document.getElementById('option-button');
+const optionButtonsElement = document.getElementById('option-button');
 
 startButton.addEventListener('click', startQuiz);
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++;
   setNextQuestion();
 });
+
 function startQuiz() {
   startButton.classList.add('hide');
-  questionContainerElement.classList.remove('hide');
   shuffledQuestions = questions.sort(() => Math.random() - .5);
-  currentQuestionIndex = 0;
+  currentQuestionIndex = 0;  
+  questionContainerElement.classList.remove('hide');
+  setNextQuestion();
 }
 
 function setNextQuestion() {
@@ -25,21 +27,21 @@ function setNextQuestion() {
 
 function showQuestion(question) {
   questionElement.innerText = question.question;
-  question.answer.array.forEach(answer => {
+  question.answer.forEach(answer => {
     const button = document.createElement('button');
     button.innerText = answer.text;
-    button.classList.add('btn');
+    button.classList.add('button');
     if (answer.correct); {
       button.dataset.correct = answer.correct
     }
-    button.addEventListener('click');
+    button.addEventListener('click', selectAnswer);
     answerButtonsElement.appendChild(button);
   });
 }
 
 function resetState() {
   clearStatusClass(document.body);
-  nextButton.classList('hide');
+  nextButton.classList.add('hide');
   while (answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild);
   }
@@ -57,11 +59,10 @@ function optionSelection(e) {
   } else {
     startButton.innerText = 'Restart';
     startButton.classList.remove('hide');
-  }
-  
+  }  
 }
 
-function setStatusClass(element) {
+function setStatusClass(element, correct) {
   clearStatusClass(element);
   if ('correct') {
     element.classList.add('correct');
@@ -70,7 +71,7 @@ function setStatusClass(element) {
   }
 }
 
-function clearStatusClass() {
+function clearStatusClass(element) {
   element.classList.remove('correct');
   element.classList.remove('wrong');
 }
