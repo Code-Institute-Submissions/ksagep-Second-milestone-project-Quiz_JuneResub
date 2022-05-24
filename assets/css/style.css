@@ -116,7 +116,7 @@ body.wrong {
     text-align: center;
 }
 
-.result {
+#results {
     text-align: center;
     margin: 10px;
     padding: 5px;
@@ -134,7 +134,7 @@ body.wrong {
     background-color: #354f52;
 }
 
-.option {
+.option-button {
     height: 12vh;
     width: 10vw;
     padding: 5px;
@@ -144,7 +144,7 @@ body.wrong {
     text-align: center;
 }
 
-.option:hover {
+.option-button:hover {
     background-color: #cad2c5;
 }
 
@@ -187,7 +187,6 @@ footer {
 .social-network {
     text-align: center;
     align-items: center;
-    padding-top: 25px;
 }
 
 .social-network > li {
@@ -197,6 +196,5 @@ footer {
 .social-network i {
     font-size: 160%;
     margin: 1%;
-    padding-left: 50px;
     color: black;
 }

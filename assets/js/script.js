@@ -4,6 +4,8 @@ const questionContainerElement = document.getElementById('question-container');
 let shuffledQuestions, currentQuestionIndex;
 const questionElement = document.getElementById('question');
 const optionButtonsElement = document.getElementById('option-button');
+var resultContainer = document.getElementById('results');
+var submitButton = document.getElementById('submit');
 
 startButton.addEventListener('click', startQuiz);
 nextButton.addEventListener('click', () => {
@@ -22,28 +24,27 @@ function startQuiz() {
 function setNextQuestion() {
   resetState();
   showQuestion(shuffledQuestions[currentQuestionIndex]);
-
 }
 
-function showQuestion(question) {
-  questionElement.innerText = question.question;
-  question.answer.forEach(answer => {
+function showQuestion(questions) {
+  questionElement.innerText = questions.questions;
+  questions.answer.forEach(answer => {
     const button = document.createElement('button');
     button.innerText = answer.text;
     button.classList.add('button');
     if (answer.correct); {
       button.dataset.correct = answer.correct
     }
-    button.addEventListener('click', selectAnswer);
-    answerButtonsElement.appendChild(button);
+    button.addEventListener('click');
+    optionButtonsElement.appendChild('button');
   });
 }
 
 function resetState() {
   clearStatusClass(document.body);
   nextButton.classList.add('hide');
-  while (answerButtonsElement.firstChild) {
-    answerButtonsElement.removeChild(answerButtonsElement.firstChild);
+  while (optionButtonsElement.firstChild) {
+    optionButtonsElement.removeChild(optionButtonsElement.firstChild);
   }
 }
 
@@ -51,7 +52,7 @@ function optionSelection(e) {
   const selectedButton = e.target;
   const correct = selectedButton.dataset.correct;
   setStatusClass(document.body, correct);
-  Array.from(answerButtonsElement.children).forEach(button => {
+  Array.from(optionButtonsElement.children).forEach(button => {
     setStatusClass(button, button.dataset.correct);
   });
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
