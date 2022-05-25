@@ -4,6 +4,7 @@ const questionContainerElement = document.getElementById('question-container');
 let shuffledQuestions, currentQuestionIndex;
 const questionElement = document.getElementById('question');
 const optionButtonsElement = document.getElementById('option-button');
+const scoreDisplay = document.getElementById('score')
 var resultContainer = document.getElementById('results');
 var submitButton = document.getElementById('submit');
 
@@ -35,8 +36,8 @@ function showQuestion(questions) {
     if (answer.correct); {
       button.dataset.correct = answer.correct
     }
-    button.addEventListener('click');
-    optionButtonsElement.appendChild('button');
+    button.addEventListener('click', optionSelection);
+    optionButtonsElement.appendChild(button);
   });
 }
 
@@ -81,74 +82,92 @@ const questions = [
   {
     question: "Where does coffee come from?",
     answer:[
-      { text: "Ethiopia", Correct: true },
-      { text: "Italy", Correct: false },
-      { text: "France", Correct: false },
-      { text: "from a nearby store", Correct: false }
+      { text: "Ethiopia", correct: true },
+      { text: "Italy", correct: false },
+      { text: "France", correct: false },
+      { text: "from a nearby store", correct: false }
     ]        
   },
   {
     question: "Which is not a roasting method?",
-    answer:[{ text: "Spanish", isCorrect: false },
-             { text: "Italian", isCorrect: false },
-             { text: "French", isCorrect: false },
-             { text: "British", isCorrect: true }]        
+    answer:[
+      { text: "Spanish", correct: false },
+      { text: "Italian", correct: false },
+      { text: "French", correct: false },
+      { text: "British", correct: true }
+    ]        
   },
   {
     question: "What color is the ripe coffee berry?",
-    answer:[{ text: "Yellow", isCorrect: false },
-             { text: "Green", isCorrect: false },
-             { text: "Red", isCorrect: true },
-             { text: "Blue", isCorrect: false }]        
+    answer:[
+      { text: "Yellow", correct: false },
+      { text: "Green", correct: false },
+      { text: "Red", correct: true },
+      { text: "Blue", correct: false }
+    ]        
   },
   {
     question: "There is really no caffeine in decaffeinated coffee?",
-    answer:[{ text: "Yes, it is true", isCorrect: false },
-             { text: "Decaffeinated coffee contains 2-6% caffeine", isCorrect: true },
-             { text: "Maybe, it is true", isCorrect: false },
-             { text: "What does decaffeinated coffee mean?", isCorrect: false }]        
+    answer:[
+      { text: "Yes, it is true", correct: false },
+      { text: "Decaffeinated coffee contains 2-6% caffeine", correct: true },
+      { text: "Maybe, it is true", correct: false },
+      { text: "What does decaffeinated coffee mean?", correct: false }
+    ]        
   },
   {
     question: "Where they produce the most coffee in the world?",
-    answer:[{ text: "Vietnam", isCorrect: false },
-             { text: "Brasil", isCorrect: true },
-             { text: "Ethiopia", isCorrect: false },
-             { text: "India", isCorrect: false }]        
+    answer:[
+      { text: "Vietnam", correct: false },
+      { text: "Brasil", correct: true },
+      { text: "Ethiopia", correct: false },
+      { text: "India", correct: false }
+    ]        
   },
   {
     question: "What is not the main characteristic of robusta coffees?",
-    answer:[{ text: "acidic", isCorrect: false },
-             { text: "high in caffeine", isCorrect: false },
-             { text: "dark brown", isCorrect: true },
-             { text: "full-bodied", isCorrect: false }]
+    answer:[
+      { text: "acidic", correct: false },
+      { text: "high in caffeine", correct: false },
+      { text: "dark brown", correct: true },
+      { text: "full-bodied", correct: false }
+    ]
   },
   {
     question: "What is not the main characteristic of arabica coffees?",
-    answer:[{ text: "sweeter than the robusta", isCorrect: false },
-             { text: "low in caffeine", isCorrect: false },
-             { text: "light-bodied", isCorrect: false },
-             { text: "smaller beans", isCorrect: true }]
+    answer:[
+      { text: "sweeter than the robusta", correct: false },
+      { text: "low in caffeine", correct: false },
+      { text: "light-bodied", correct: false },
+      { text: "smaller beans", correct: true }
+    ]
   },
   {
     question: "When coffee was discovered?",
-    answer:[{ text: "15th century", isCorrect: true },
-             { text: "16th century", isCorrect: false },
-             { text: "17th century", isCorrect: false },
-             { text: "19th century", isCorrect: false }]
+    answer:[
+      { text: "15th century", correct: true },
+      { text: "16th century", correct: false },
+      { text: "17th century", correct: false },
+      { text: "19th century", correct: false }
+    ]
   },
   {
     question: "What percentage of the coffee stays warm if we add cream to it?",
-    answer:[{ text: "10%", isCorrect: false },
-             { text: "20%", isCorrect: true },
-             { text: "30%", isCorrect: false },
-             { text: "if you have a microwave oven, always", isCorrect: false }]
+    answer:[
+      { text: "10%", correct: false },
+      { text: "20%", correct: true },
+      { text: "30%", correct: false },
+      { text: "if you have a microwave oven, always", correct: false }
+    ]
   },
   {
     question: "In which country do people drink the most coffee?",
-    answer:[{ text: "USA", isCorrect: false },
-             { text: "Finland", isCorrect: true },
-             { text: "Russia", isCorrect: false },
-             { text: "Vietnam", isCorrect: false }]
+    answer:[
+      { text: "USA", correct: false },
+      { text: "Finland", correct: true },
+      { text: "Russia", correct: false },
+      { text: "Vietnam", correct: false }
+    ]
   }
   ];
   
