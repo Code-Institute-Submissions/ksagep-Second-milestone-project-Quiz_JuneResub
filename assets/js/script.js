@@ -1,4 +1,3 @@
-const startButton = document.getElementById('start-button');
 const nextButton = document.getElementById('next-button');
 const questionContainerElement = document.getElementById('question-container');
 let shuffledQuestions, currentQuestionIndex;
@@ -8,27 +7,23 @@ const scoreDisplay = document.getElementById('score')
 var resultContainer = document.getElementById('results');
 var submitButton = document.getElementById('submit');
 
-startButton.addEventListener('click', startQuiz);
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++;
   setNextQuestion();
 });
-
 function startQuiz() {
-  startButton.classList.add('hide');
   shuffledQuestions = questions.sort(() => Math.random() - .5);
-  currentQuestionIndex = 0;  
-  questionContainerElement.classList.remove('hide');
+  console.log('sq', shuffledQuestions);
+  currentQuestionIndex = 0;
   setNextQuestion();
 }
-
 function setNextQuestion() {
   resetState();
   showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
-
 function showQuestion(questions) {
-  questionElement.innerText = questions.questions;
+  console.log('here: ', questions);
+  questionElement.innerText = questions.question;
   questions.answer.forEach(answer => {
     const button = document.createElement('button');
     button.innerText = answer.text;
@@ -40,7 +35,6 @@ function showQuestion(questions) {
     optionButtonsElement.appendChild(button);
   });
 }
-
 function resetState() {
   clearStatusClass(document.body);
   nextButton.classList.add('hide');
@@ -48,7 +42,6 @@ function resetState() {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild);
   }
 }
-
 function optionSelection(e) {
   const selectedButton = e.target;
   const correct = selectedButton.dataset.correct;
@@ -63,7 +56,6 @@ function optionSelection(e) {
     startButton.classList.remove('hide');
   }  
 }
-
 function setStatusClass(element, correct) {
   clearStatusClass(element);
   if ('correct') {
@@ -72,12 +64,10 @@ function setStatusClass(element, correct) {
     element.classList.add('wrong');
   }
 }
-
 function clearStatusClass(element) {
   element.classList.remove('correct');
   element.classList.remove('wrong');
 }
-
 const questions = [
   {
     question: "Where does coffee come from?",
@@ -171,3 +161,4 @@ const questions = [
   }
   ];
   
+  startQuiz();
