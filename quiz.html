@@ -23,9 +23,9 @@
     
     <!-- quiz display for game -->
     <div class="container">
-        
-        <div class="question-container"></div>
         <div id="question">Question</div>
+        <div class="question-container"></div>
+        
         <div class="option-container"></div>
         <div id="option-button">
             <button class="option">Answer 1</button>
@@ -39,7 +39,10 @@
             <button id="next-button" class="next-button hide">Next</button>
             <button id="submit">Get results</button>
         </div>
-        <h2>Score:<span id="score">0</span></h2>
+        <div class="score-area">
+            <p class="scores">Correct Answers <span id="score">0</span></p>
+            <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
+        </div>
         <div id="results"></div>
         
     </div>
