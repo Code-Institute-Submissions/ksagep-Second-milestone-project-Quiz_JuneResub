@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function() {
+  let buttons = document.getElementsByTagName("button");
+} )
+
 const nextButton = document.getElementById('next-button');
 const questionContainerElement = document.getElementById('question-container');
 let shuffledQuestions, currentQuestionIndex;
@@ -11,16 +15,19 @@ nextButton.addEventListener('click', () => {
   currentQuestionIndex++;
   setNextQuestion();
 });
+
 function startQuiz() {
   shuffledQuestions = questions.sort(() => Math.random() - .5);
   console.log('sq', shuffledQuestions);
   currentQuestionIndex = 0;
   setNextQuestion();
 }
+
 function setNextQuestion() {
   resetState();
   showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
+
 function showQuestion(questions) {
   console.log('here: ', questions);
   questionElement.innerText = questions.question;
@@ -35,6 +42,7 @@ function showQuestion(questions) {
     optionButtonsElement.appendChild(button);
   });
 }
+
 function resetState() {
   clearStatusClass(document.body);
   nextButton.classList.add('hide');
@@ -42,6 +50,7 @@ function resetState() {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild);
   }
 }
+
 function optionSelection(e) {
   const selectedButton = e.target;
   const correct = selectedButton.dataset.correct;
@@ -56,6 +65,7 @@ function optionSelection(e) {
     startButton.classList.remove('hide');
   }  
 }
+
 function setStatusClass(element, correct) {
   clearStatusClass(element);
   if ('correct') {
@@ -64,10 +74,12 @@ function setStatusClass(element, correct) {
     element.classList.add('wrong');
   }
 }
+
 function clearStatusClass(element) {
   element.classList.remove('correct');
   element.classList.remove('wrong');
 }
+
 const questions = [
   {
     question: "Where does coffee come from?",
