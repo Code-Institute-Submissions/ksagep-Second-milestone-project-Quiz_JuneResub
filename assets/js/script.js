@@ -72,14 +72,15 @@ function optionSelection(e) {
     nextButton.classList.remove('hide');
   } else {
     startButton.classList.remove('hide');
+    startButton.innerText = 'Restart';
   }  
 }
 
 function checkAnswer() {
 
-  let userAnswer = parseInt(document.getElementById("option-box").value);
-  let calculatedAnswer = optionSelection();
-  let correct = userAnswer === calculatedAnswer[0];
+  let userAnswer = document.getElementById("option-box").value;
+  let calculatedAnswer = optionSelection('true');
+  let correct = userAnswer === calculatedAnswer['true'];
 
   if (correct) {
       incrementScore();
@@ -88,7 +89,7 @@ function checkAnswer() {
   }
 }
 
-function setStatusClass(element, correct) {
+function setStatusClass(element) {
   clearStatusClass(element);
   if ('correct') {
     element.classList.add('correct');
