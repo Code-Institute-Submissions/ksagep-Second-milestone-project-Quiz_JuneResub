@@ -13,10 +13,17 @@ const scoreDisplay = document.getElementById('score')
 var resultContainer = document.getElementById('results');
 var submitButton = document.getElementById('submit');
 
+/** Give next button to the page */
+
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++;
   setNextQuestion();
 });
+
+function setNextQuestion() {
+  resetState();
+  showQuestion(shuffledQuestions[currentQuestionIndex]);
+}
 
 /** Start the game and provide the posibility to shuffle the questions */
 
@@ -27,10 +34,7 @@ function startQuiz() {
   setNextQuestion();
 }
 
-function setNextQuestion() {
-  resetState();
-  showQuestion(shuffledQuestions[currentQuestionIndex]);
-}
+/** Provide questions to the game and the possibility of choose */
 
 function showQuestion(questions) {
   console.log('here: ', questions);
