@@ -66,6 +66,19 @@ function optionSelection(e) {
   }  
 }
 
+function checkAnswer() {
+
+  let userAnswer = parseInt(document.getElementById("option-box").value);
+  let calculatedAnswer = optionSelection();
+  let correct = userAnswer === calculatedAnswer[0];
+
+  if (correct) {
+      incrementScore();
+  } else {
+      incrementFalseAnswer();
+  }
+}
+
 function setStatusClass(element, correct) {
   clearStatusClass(element);
   if ('correct') {
@@ -78,6 +91,27 @@ function setStatusClass(element, correct) {
 function clearStatusClass(element) {
   element.classList.remove('correct');
   element.classList.remove('wrong');
+}
+
+/**
+* Gets the correct answers from the DOM and increments it by 1
+*/
+
+function incrementScore() {
+
+  let newScore = parseInt(document.getElementById("true").innerText);
+  document.getElementById("true").innerText = ++newScore;
+
+}
+
+/**
+* Gets the incorrect answers from the DOM and increments it by 1
+*/
+function incrementFalseAnswer() {
+
+  let newScore = parseInt(document.getElementById("false").innerText);
+  document.getElementById("false").innerText = ++newScore;
+  
 }
 
 const questions = [
