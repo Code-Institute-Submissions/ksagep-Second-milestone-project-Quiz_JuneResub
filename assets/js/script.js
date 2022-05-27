@@ -1,3 +1,5 @@
+// Wait for the DOM to load everything before the quiz will start
+
 document.addEventListener("DOMContentLoaded", function() {
   let buttons = document.getElementsByTagName("button");
 } )
@@ -15,6 +17,8 @@ nextButton.addEventListener('click', () => {
   currentQuestionIndex++;
   setNextQuestion();
 });
+
+/** Start the game and provide the posibility to shuffle the questions */
 
 function startQuiz() {
   shuffledQuestions = questions.sort(() => Math.random() - .5);
@@ -51,6 +55,8 @@ function resetState() {
   }
 }
 
+/** Provide selection from answers and after the choosing the next button will appear */
+
 function optionSelection(e) {
   const selectedButton = e.target;
   const correct = selectedButton.dataset.correct;
@@ -61,7 +67,6 @@ function optionSelection(e) {
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide');
   } else {
-    startButton.innerText = 'Restart';
     startButton.classList.remove('hide');
   }  
 }
@@ -93,26 +98,24 @@ function clearStatusClass(element) {
   element.classList.remove('wrong');
 }
 
-/**
-* Gets the correct answers from the DOM and increments it by 1
-*/
+/** Gets the correct answers from the DOM and increments it by 1 */
 
 function incrementScore() {
 
-  let newScore = parseInt(document.getElementById("true").innerText);
-  document.getElementById("true").innerText = ++newScore;
+  let newScore = parseInt(document.getElementById("score").innerText);
+  document.getElementById("score").innerText = ++newScore;
 
 }
 
-/**
-* Gets the incorrect answers from the DOM and increments it by 1
-*/
+/** Gets the incorrect answers from the DOM and increments it by 1 */
 function incrementFalseAnswer() {
 
-  let newScore = parseInt(document.getElementById("false").innerText);
-  document.getElementById("false").innerText = ++newScore;
+  let newScore = parseInt(document.getElementById("incorrect").innerText);
+  document.getElementById("incorrect").innerText = ++newScore;
   
 }
+
+/** Provide the list of questions marked with true and false value */
 
 const questions = [
   {
