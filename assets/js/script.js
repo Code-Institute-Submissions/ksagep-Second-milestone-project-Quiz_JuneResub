@@ -1,7 +1,7 @@
 // Wait for the DOM to load everything before the quiz will start
 
 document.addEventListener("DOMContentLoaded", function() {
-  let buttons = document.getElementsByTagName("button");
+  let buttons = document.getElementsByTagName('button');
 } )
 
 const nextButton = document.getElementById('next-button');
@@ -71,7 +71,7 @@ function optionSelection(e) {
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide');
   } else {
-    startButton.classList.remove('hide');
+    
     startButton.innerText = 'Restart';
   }  
 }

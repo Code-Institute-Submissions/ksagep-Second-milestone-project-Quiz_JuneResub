@@ -7,19 +7,6 @@ body {
     height: 100vh;
 }
 
-body.correct {
-    --hue: var(--hue-correct);
-}
-
-body.wrong {
-    --hue: var(--hue-wrong);
-}
-
-:root {
-    --hue-wrong: 0;
-    --hue-correct: 145;
-}
-
 .container {
     height: 70vh;
     display: flex;
@@ -79,14 +66,6 @@ body.wrong {
 
 .hide {
     display: none;
-}
-
-.btn.correct {
-     --hue: var(--hue-correct);
-}
-
-.btn.wrong {
-    --hue: var(--hue-wrong);
 }
 
 /* cover text */
