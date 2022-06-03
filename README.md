@@ -87,7 +87,7 @@ The footer is simple and it contains copyright info.
 - Code Institute tutor support
 - Am I Responsive for a responsive image in README
 - mikocoffee for image of the coffee beans
-- pexels for image of cup of coffee
+- [pexels](https://www.pexels.com/nl-nl/zoeken/coffee/) for image of cup of coffee
 
 ## Testing
 
