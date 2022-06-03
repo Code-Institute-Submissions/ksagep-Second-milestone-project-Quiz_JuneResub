@@ -1,67 +1,112 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-
-body {
-    margin: 0px;
-    padding: 0px;
-    width: 100vw;
-    height: 100vh;
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-.container {
-    height: 70vh;
+:root {
+    --hue-neutral: 200;
+    --hue-correct: 145;
+    --hue-wrong: 0;
+}
+
+body {
+    --hue: var(--hue-neutral);
+    padding: 0;
+    margin: 0;
     display: flex;
+    width: 100vw;
+    height: 100vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: hsl(var(--hue), 100%, 20%);
+}
+
+body.correct {
+    --hue: var(--hue-correct);
+}
+
+body.wrong {
+    --hue: var(--hue-wrong);
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+}
+
+.btn:hover {
+    border-color: black;
+}
+
+.btn.correct {
+    --hue: var(--hue-correct);
+    color: black;
+}
+
+.btn.wrong {
+    --hue: var(--hue-wrong);
 }
 
 /* heading */
 
 .heading {
-    font-size: 40px;
-    font-family: sans-serif;
+    font-size: 25px;
     text-align: center;
-    padding-right: 270px;
     color: black;
-    
+    display: flex;
+    flex-direction: row;
+    width: 800px;
 }
 
-.front-image-left {
-    width: 276px;
-    height: 183px;
+.front-image-left {    
     float: left;
-    padding-top: 70px;    
+    padding-bottom: 70px;    
 }
 
 .front-image-right {
-    width: 270px;
-    height: 179px;
-    padding-top: 70px;
     float: right;
-    padding-top: 2px;   
+    padding-bottom: 70px;    
+       
 }
 
-/* navigation link */
+.start-btn, .next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
 
 #start-button {
-    font-size: 110%;
-    letter-spacing: 4px;
-    margin-top: 150px;
-    text-align: center;
+    color: white;
+    margin: 25px;
 }
 
-#start-button a {
-    text-decoration: none;
-    color: blue;
-}
-
-#start-button:hover {
-    border-bottom: 1px black;
-}
-
-.next-button {
-    font-style: normal;
-    padding: 5px 10px;
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hide {
@@ -72,98 +117,17 @@ body {
 
 #cover-text {
     color: #0a0a0a;
-    font-size: 90%;
+    font-size: 80%;
     font-family: Raleway;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-align: center;
-
-    width: 500px;
-    height: 75px;
-
-    padding-left: 425px;
-    padding-top: 0;
-}
-/* game area */
-
-.question-container {
-    margin: 5px;
-    padding: 1px;
-    height: 59px;
-    width: 500px;
-    font-size: x-large;
-    text-align: center;
-}
-
-#results {
-    text-align: center;
-    margin: 10px;
-    padding: 5px;
-    height: 76px;
-    width: 100px;
-    font-size: 50px;
-}
-
-.option-button {
-    height: 12vh;
-    width: 10vw;
-    padding: 25px;
-    font-size: smaller;
-    background-color: floralwhite;
-    border-radius: 20%;
-    text-align: center;
-}
-
-.option-button:hover {
-    background-color: #cad2c5;
-}
-
-#score {
-    color: green;
-    font-weight: bold;
-}
-
-#incorrect {
-    color: red;
-    font-weight: bold;
+    width: 800px;
 }
 
 .scores {
-    display: inline-block;
-    padding: 25px;
+    text-align: center;
 }
-
-.navigation {
-    margin: 10px;
-    padding: 5px;
-    width: 80vw;
-    height: 10vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.next {
-    font-size: larger;
-    margin: 0px;
-    padding: 5px;
-    width: 30vw;
-    height: 8vh;
-    background-color: #84a98c;
-}
-
-/* for medium screen sizes from 768 px and down */
-
-@media screen and (max-width: 400px) {
-    
-    .container {
-        width: 65%;
-        height: auto;
-        margin: 0 auto;
-    }
-}
-
-/* footer */
 
 footer {
     height: 100px;        
@@ -180,6 +144,6 @@ footer {
 
 .social-network i {
     font-size: 160%;
-    margin: 1%;
+    margin: 15px;
     color: black;
 }
