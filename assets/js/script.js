@@ -1,17 +1,13 @@
-// Wait for the DOM to load everything before the quiz will start
-
-document.addEventListener("DOMContentLoaded", function() {
-  let buttons = document.getElementsByTagName('button');
-} )
-
-const nextButton = document.getElementById('next-button');
+const startButton = document.getElementById('start-btn')
+const nextButton = document.getElementById('next-btn');
 const questionContainerElement = document.getElementById('question-container');
-let shuffledQuestions, currentQuestionIndex;
 const questionElement = document.getElementById('question');
-const optionButtonsElement = document.getElementById('option-button');
-const scoreDisplay = document.getElementById('score')
-var resultContainer = document.getElementById('results');
-var submitButton = document.getElementById('submit');
+const answerButtonsElement = document.getElementById('answer-button');
+
+let shuffledQuestions, currentQuestionIndex;
+let scorenumbers = document.getElementById('scores');
+let endresult = document.getElementById('end-result');
+let lastMessage = document.getElementById('last-message');
 
 /** Give next button to the page */
 
