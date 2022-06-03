@@ -40,11 +40,7 @@ function startGame() {
 function setNextQuestion() {
     resetState();
     showQuestion(shuffledQuestions[currentQuestionIndex]);
-    
-    console.log('answer', selectAnswer);
-    console.log('show question length', showQuestion.length);
-    console.log('shuffled questions length', shuffledQuestions.length);
-    console.log('attempted questions', attemptedQuestions);
+   
 }
 
 /** Take the questions and the linked possible answers to the screen */

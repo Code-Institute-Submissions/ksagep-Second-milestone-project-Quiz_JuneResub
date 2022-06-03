@@ -125,13 +125,23 @@ body.wrong {
     width: 800px;
 }
 
+/* Results */
+
+.result-box {
+    text-align: center;
+}
+
 .scores {
     text-align: center;
 }
 
+/* Footer */
+
 footer {
     height: 100px;        
 }
+
+/* Social media icons */
 
 .social-network {
     text-align: center;
