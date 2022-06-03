@@ -163,30 +163,23 @@ footer {
 /* Display the app on smaller devices */
 
 @media (max-width: 414px) {
-    
     .container {
-        width: 50%;
-        height: 50%;
-        
+        width: 100%;
     }
-
+    
     .heading {
-        size: 30%;
+        width: 80%;        
     }
 
     h1 {
-        width: 45%;
-        height: 45%;
+        width: 50%;
     }
+
     .front-image-left {
-        width: 45%;
-        height: 45%;
-        padding: 0;
+        width: 100%;        
     }
 
     .front-image-right {
-        width: 45%;
-        height: 45%;
-        padding: 0;
+        width: 100%;        
     }
 }
