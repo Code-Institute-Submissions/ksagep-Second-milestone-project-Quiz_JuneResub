@@ -71,6 +71,45 @@ function resetState() {
   }
 }
 
+/** Provide the possibility of selection from shuffled questions */
+
+function selectAnswer(e) {
+  const selectedButton = e.target;
+  const correct = selectedButton.dataset.correct;
+  setStatusClass(document.body, correct);
+  if(correct) {
+    scores++;
+    scorepush();
+  }
+
+  Array.from(answerButtonsElement.children).forEach(button => {
+    setStatusClass(button, button.dataset.correct);
+  });
+  if (shuffledQuestions.length > currentQuestionIndex +1) {
+    nextButton.classList.remove('hide'); 
+  }  else {
+    startButton.innerText = 'Restart';
+    startButton.classList.remove('hide');
+    restarted = true;
+  }
+  if (currentQuestionIndex +1 >= shuffledQuestions.length) {
+    gameover();
+  }
+}
+
+function setStatusClass(element, correct) {
+  clearStatusClass(element);
+  if (correct) {
+    element.classList.add('correct');
+  } else {
+    element.classList.add('wrong');
+  }
+}
+
+function clearStatusClass(element) {
+    element.classList.remove('correct');
+    element.classList.remove('wrong');
+}
 
 
 
