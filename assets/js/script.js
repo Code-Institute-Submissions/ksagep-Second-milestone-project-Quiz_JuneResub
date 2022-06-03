@@ -112,103 +112,34 @@ function clearStatusClass(element) {
 }
 
 
-
-/** Start the game and provide the posibility to shuffle the questions */
-
-function startQuiz() {
-  shuffledQuestions = questions.sort(() => Math.random() - .5);
-  console.log('sq', shuffledQuestions);
-  currentQuestionIndex = 0;
-  setNextQuestion();
-}
-
-/** Provide questions to the game and the possibility of choose */
-
-function showQuestion(questions) {
-  console.log('here: ', questions);
-  questionElement.innerText = questions.question;
-  questions.answer.forEach(answer => {
-    const button = document.createElement('button');
-    button.innerText = answer.text;
-    button.classList.add('button');
-    if (answer.correct); {
-      button.dataset.correct = answer.correct
-    }
-    button.addEventListener('click', optionSelection);
-    optionButtonsElement.appendChild(button);
-  });
-}
-
-function resetState() {
-  clearStatusClass(document.body);
-  nextButton.classList.add('hide');
-  while (optionButtonsElement.firstChild) {
-    optionButtonsElement.removeChild(optionButtonsElement.firstChild);
-  }
-}
-
-/** Provide selection from answers and after the choosing the next button will appear */
-
-function optionSelection(e) {
-  const selectedButton = e.target;
-  const correct = selectedButton.dataset.correct;
-  setStatusClass(document.body, correct);
-  Array.from(optionButtonsElement.children).forEach(button => {
-    setStatusClass(button, button.dataset.correct);
-  });
-  if (shuffledQuestions.length > currentQuestionIndex + 1) {
-    nextButton.classList.remove('hide');
-  } else {
-    
-    startButton.innerText = 'Restart';
-  }  
-}
-
-function checkAnswer() {
-
-  let userAnswer = document.getElementById("option-box").value;
-  let calculatedAnswer = optionSelection('true');
-  let correct = userAnswer === calculatedAnswer['true'];
-
-  if (correct) {
-      incrementScore();
-  } else {
-      incrementFalseAnswer();
-  }
-}
-
-function setStatusClass(element) {
-  clearStatusClass(element);
-  if ('correct') {
-    element.classList.add('correct');
-  } else {
-    element.classList.add('wrong');
-  }
-}
-
-function clearStatusClass(element) {
-  element.classList.remove('correct');
-  element.classList.remove('wrong');
-}
-
 /** Gets the correct answers from the DOM and increments it by 1 */
 
-function incrementScore() {
-
-  let newScore = parseInt(document.getElementById("score").innerText);
-  document.getElementById("score").innerText = ++newScore;
-
+function scorepush() {
+  scorenumbers.innerHTML = `Score: ${scores}/10`;
 }
 
-/** Gets the incorrect answers from the DOM and increments it by 1 */
-function incrementFalseAnswer() {
+function gameover() {
+  console.log('Finished the game');
+  clearInterval(counter);
+  endscore();
 
-  let newScore = parseInt(document.getElementById("incorrect").innerText);
-  document.getElementById("incorrect").innerText = ++newScore;
-  
+  scores = 0;
+  scorepush();
 }
 
-/** Provide the list of questions marked with true and false value */
+function endscore() {
+  console.log('Shows the results');
+  endresult.innerText = `Your result: ${scores}/10`;
+  if(scores<=5){
+    lastMessage.innerText="I think you can do this better! Drink another coffee!";
+  }
+  else if(scores >5 && scores <= 9){    
+    lastMessage.innerText="You know some important things about coffee.";
+  }
+  else if(scores === 10){
+    lastMessage.innerText="Congratulations! You are a real coffee fan!";
+  }
+}
 
 const questions = [
   {
