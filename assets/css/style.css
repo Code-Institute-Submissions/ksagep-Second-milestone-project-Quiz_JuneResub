@@ -40,6 +40,8 @@ body.wrong {
     box-shadow: 0 0 10px 2px;
 }
 
+/* Buttons */
+
 .btn-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -156,4 +158,35 @@ footer {
     font-size: 160%;
     margin: 15px;
     color: black;
+}
+
+/* Display the app on smaller devices */
+
+@media (max-width: 414px) {
+    
+    .container {
+        width: 50%;
+        height: 50%;
+        
+    }
+
+    .heading {
+        size: 30%;
+    }
+
+    h1 {
+        width: 45%;
+        height: 45%;
+    }
+    .front-image-left {
+        width: 45%;
+        height: 45%;
+        padding: 0;
+    }
+
+    .front-image-right {
+        width: 45%;
+        height: 45%;
+        padding: 0;
+    }
 }
