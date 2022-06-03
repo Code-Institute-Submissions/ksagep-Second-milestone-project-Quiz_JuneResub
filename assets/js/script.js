@@ -9,17 +9,70 @@ let scorenumbers = document.getElementById('scores');
 let endresult = document.getElementById('end-result');
 let lastMessage = document.getElementById('last-message');
 
-/** Give next button to the page */
+let scores = 0;
+let counter;
 
+let restarted = false;
+
+/** Get the button elements and add event listeners to them */
+
+startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++;
   setNextQuestion();
 });
 
+function startGame() {
+  if(restarted) {
+    restarted = false;
+    lastMessage.innerText = ""
+    endresult.innerText = ""
+  }  
+
+  startButton.classList.add('hide');
+  shuffledQuestions = questions.sort(() => Math.random() - .5);
+  currentQuestionIndex = 0;
+  questionContainerElement.classList.remove('hide');
+  setNextQuestion();
+  
+}
+
 function setNextQuestion() {
   resetState();
   showQuestion(shuffledQuestions[currentQuestionIndex]);
+  
+  console.log('answer', selectAnswer);
+  console.log('show question length', showQuestion.length);
+  console.log('shuffled questions length', shuffledQuestions.length);
+  console.log('attempted questions', attemptedQuestions);
 }
+
+/** Take the questions and the linked possible answers to the screen */
+
+function showQuestion(question) {
+  questionElement.innerText = question.question;
+  question.answer.forEach(answer => {
+    const button = document.createElement('button');
+    button.innerText = answer.text;
+    button.classList.add('btn');
+    if (answer.correct) {
+      button.dataset.correct = answer.correct;
+    }
+    button.addEventListener('click', selectAnswer);
+    answerButtonsElement.appendChild(button);
+  });
+}
+
+function resetState() {
+  clearStatusClass(document.body);
+  nextButton.classList.add('hide');
+  while (answerButtonsElement.firstChild) {
+    answerButtonsElement.removeChild(answerButtonsElement.firstChild);
+  }
+}
+
+
+
 
 /** Start the game and provide the posibility to shuffle the questions */
 
