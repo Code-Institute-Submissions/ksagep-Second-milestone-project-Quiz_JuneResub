@@ -25,8 +25,8 @@ nextButton.addEventListener('click', () => {
 function startGame() {
     if(restarted) {
       restarted = false;
-      lastMessage.innerText = ""
-      endresult.innerText = ""
+      lastMessage.innerText = "";
+      endresult.innerText = "";
     }  
   
     startButton.classList.add('hide');
